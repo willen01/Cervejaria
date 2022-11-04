@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { BrweriesController } from "../brweries/controllers/BrweriesController";
 import { createUserController, loginUserController } from "../users/UseCases";
+import { auth } from "./auth/authToken";
 
 const brweriesController = new BrweriesController();
 const router = Router();
@@ -16,6 +17,6 @@ router.post("/login", (request, response) => {
 });
 
 //lista cervejarias
-router.get("/brweries", brweriesController.main);
+router.get("/brweries", auth, brweriesController.main);
 
 export { router };
