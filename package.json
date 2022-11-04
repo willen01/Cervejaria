@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
+    "start":"node ./dist/app/server.js",
+    "start:prod":"tsc && node ./dist/app/server.js",
     "start:dev": "ts-node-dev ./src/app/server.ts",
     "migrate:make": "prisma migrate dev --name",
     "migrate:run": "prisma migrate dev"
