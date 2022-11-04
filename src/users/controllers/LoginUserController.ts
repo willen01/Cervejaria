@@ -7,7 +7,7 @@ export class LoginUserController {
     const { username, password } = request.body;
     try {
       const getToken = await this.loginUseCase.login({ username, password });
-      response.setHeader("auhorization-token", getToken); //devolve o token no header da aplicação  com a chave 'auhorization-token'
+      response.setHeader("authorization-token", getToken); //devolve o token no header da aplicação  com a chave 'auhorization-token'
       return response.status(200).send();
     } catch (error) {
       return response.status(200).json({ error });
