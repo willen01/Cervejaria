@@ -27,7 +27,7 @@ Para rodar esta aplicação localmente tenha instalado em sua máquina
 - Para iniciar esta aplicação, clone este repositório e instale as dependências rodando o comando `yarn install`.
 - Modifique o arquivo **.env.example** para **.env** e configure as credenciais da url de conexão com o banco de dados de acordo com as variáveis do arquivo **docker-compose.yml**, e insira uma chave secreta na variável **JWT_SECRET** para utilização da autenticação jwt.
 - instale as migrations rodando o comando `yarn prisma migrate dev`
-- inicialize o servidor em modo de desenvolvimento com o comando `yarn start:dev`, ou em modo de produção com o comando `yarn start`, neste ultimo caso uma pasta **dist** será criada na raiz do repositório, em ambos os casos, o servidor será inicializado na porta **3333**
+- inicialize o servidor em modo de desenvolvimento com o comando `yarn start:dev`, ou em modo de produção com o comando `yarn start:prod`, neste ultimo caso uma pasta **dist** será criada na raiz do repositório, em ambos os casos, o servidor será inicializado na porta **3333**
 
 ### criando um novo usuário
 
