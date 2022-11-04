@@ -52,5 +52,48 @@ Para fazer login é necessário enviar um usuário e senhas válidas para o endp
 
 ### Listando cervejarias
 
-Para listar as cervejarias é necessário enviar junto da requisição um token jwt válido no formato bearer-token. Caso um token não seja enviado uma resposta com status 401 será retornada, caso um token inválido seja enviado uma resposta 403 será enviada.
-Quando um token válido é enviado, um conjunto de dados de cervejaria em formato json será retornado.
+Para listar as cervejarias é necessário enviar junto da requisição um token jwt válido no formato bearer-token. Caso um token não seja enviado uma resposta com status 401 será retornada, caso um token inválido seja enviado uma resposta 403 será retornada.
+Quando um token válido é enviado, um conjunto de dados de cervejaria em formato json será retornado, por exemplo:
+
+```
+[
+	{
+		"id": "10-56-brewing-company-knox",
+		"name": "10-56 Brewing Company",
+		"brewery_type": "micro",
+		"street": "400 Brown Cir",
+		"address_2": null,
+		"address_3": null,
+		"city": "Knox",
+		"state": "Indiana",
+		"county_province": null,
+		"postal_code": "46534",
+		"country": "United States",
+		"longitude": "-86.627954",
+		"latitude": "41.289715",
+		"phone": "6308165790",
+		"website_url": null,
+		"updated_at": "2022-10-30T06:11:39.514Z",
+		"created_at": "2022-10-30T06:11:39.514Z"
+	},
+	{
+		"id": "10-barrel-brewing-co-bend-1",
+		"name": "10 Barrel Brewing Co",
+		"brewery_type": "large",
+		"street": "62970 18th St",
+		"address_2": null,
+		"address_3": null,
+		"city": "Bend",
+		"state": "Oregon",
+		"county_province": null,
+		"postal_code": "97701-9847",
+		"country": "United States",
+		"longitude": "-121.28170597038259",
+		"latitude": "44.08683530625218",
+		"phone": "5415851007",
+		"website_url": "http://www.10barrel.com",
+		"updated_at": "2022-10-30T06:11:39.514Z",
+		"created_at": "2022-10-30T06:11:39.514Z"
+	}
+],
+```
