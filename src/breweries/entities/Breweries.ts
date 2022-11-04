@@ -1,4 +1,4 @@
-export interface IBrweries {
+export interface IBreweries {
   id: string;
   name: string;
   brewery_type: string;

@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { BrweriesController } from "../brweries/controllers/BrweriesController";
+import { BreweriesController } from "../breweries/controllers/BreweriesController";
 import { createUserController, loginUserController } from "../users/UseCases";
 import { auth } from "./auth/authToken";
 
-const brweriesController = new BrweriesController();
+const breweriesController = new BreweriesController();
 const router = Router();
 
 //cadastro de um novo usuário
@@ -17,6 +17,6 @@ router.post("/login", (request, response) => {
 });
 
 //lista cervejarias
-router.get("/brweries", auth, brweriesController.main);
+router.get("/breweries", auth, breweriesController.main);
 
 export { router };
