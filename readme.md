@@ -29,7 +29,7 @@ Para rodar esta aplicação localmente tenha instalado em sua máquina
 - instale as migrations rodando o comando `yarn prisma migrate dev`
 - inicialize o servidor em modo de desenvolvimento com o comando `yarn start:dev`, ou em modo de produção com o comando `yarn start`, neste ultimo caso uma pasta **dist** será criada na raiz do repositório, em ambos os casos, o servidor será inicializado na porta **3333**
 
-#### criando um novo usuário
+### criando um novo usuário
 
 Faça o envio dos dados em formato **json** para o endpoint adequado, em caso de sucesso, uma resposta com status 201 será retornada, exemplo:
 
@@ -46,7 +46,7 @@ os dados enviados devem atender ao seguinte tipo:
 | username | string  
 | password | string
 
-#### Login para usuário existente
+### Login para usuário existente
 
 Para fazer login é necessário enviar um usuário e senhas válidas para o endpoint correspondente. Em caso de sucesso, um **token jwt** será enviado no header da resposta com a chave **authorization-token : token**
 
